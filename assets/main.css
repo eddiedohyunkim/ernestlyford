@@ -1,0 +1,74 @@
+:root{
+	--ts: 3.7vw; 
+}
+
+@media all and (max-width: 800px) { 
+	:root{ 
+		--ts: 5.5vw; 
+	} 
+}
+@media all and (max-width: 450px) { 
+	:root{ 
+		--ts: 6.5vw; 
+	} 
+}
+
+html * {
+	-webkit-text-size-adjust: 100%; 
+	   -moz-text-size-adjust: 100%; 
+	    -ms-text-size-adjust: 100%; 
+	        text-size-adjust: 100%;
+}
+*, *:before, *:after{
+	box-sizing: border-box;
+}
+
+html, body{
+	height:100%;
+	font-family: helvetica neue;
+	font-weight: bold;
+	font-size: var(--ts);
+	isolation: isolate;
+	margin: 0;
+}
+
+html, body, main{
+	overscroll-behavior-x: none;
+	overscroll-behavior-y: none;
+	overflow: hidden;
+}
+
+main{
+	height:100%;
+	position: relative;
+}
+main > .flex-row{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+  padding: 0 0.5em 0 0.5em;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+.flex-row > .letter{
+	width:0px;
+	flex-grow: 1;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition-duration: 500ms;
+	transition-property: all;
+	cursor: default;
+	position: relative;
+}
+.flex-row > .letter > span{
+	user-select: none;
+  -webkit-user-select: none; /* Safari fallback only */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}

@@ -1,0 +1,18 @@
+<svg
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+  width='1000' height='1000'>
+
+	<filter id='n' x='0' y='0' height="1000" width="1000" filterUnits="userSpaceOnUse" filterRes="1000">
+
+		<feTurbulence
+		  type='fractalNoise'
+		  baseFrequency='0.9'
+		  stitchTiles='stitch'/>
+		<feGaussianBlur stdDeviation="10" />  
+	</filter>
+
+
+	<!-- <rect width='1000' height='1000' fill='#000'/> -->
+	<rect width='1000' height='1000' filter="url(#n)" opacity='0.5'/>
+</svg>

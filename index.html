@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ernest Lyford</title>
+	<link rel="stylesheet" type="text/css" href="assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/main.css">
+</head>
+<body>
+	<svg
+  xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+  width='1000' height='1000'>
+
+    <filter id='n' x='0' y='0'>
+            <feTurbulence
+              type='fractalNoise'
+              baseFrequency='1'
+              stitchTiles='stitch'/>
+    </filter>
+</svg>
+<!-- <div class="isolate"> -->
+<main class="flex-row noise">
+	<!-- <div class=""></div> -->
+	<div class="letter green"><span>e</span></div>
+	<div class="letter green"><span>r</span></div>
+	<div class="letter green"><span>n</span></div>
+	<div class="letter green"><span>e</span></div>
+	<div class="letter green"><span>s</span></div>
+	<div class="letter green"><span>t</span></div>
+	<div class="letter"><span>&nbsp;</span></div>
+	<div class="letter purple"><span>l</span></div>
+	<div class="letter purple"><span>y</span></div>
+	<div class="letter purple"><span>f</span></div>
+	<div class="letter purple"><span>o</span></div>
+	<div class="letter purple"><span>r</span></div>
+	<div class="letter purple"><span>d</span></div>
+	<!-- <div class=""></div> -->
+</main>
+<div id="bottom">film, advisory, and speaking by nicholas ma. reach out at hello@ernestlyford.com</div>
+<!-- </div> -->
+<script type="text/javascript">
+	let color = "#f6c200"
+	let letters = document.querySelectorAll('.letter');
+	letters.forEach(letter=>{
+		letter.addEventListener('mouseover',function(){
+			this.style.width="15%";
+			this.style.background=`linear-gradient(to right, ${color}cc, ${color}ff , ${color}cc)`;
+			// this.style.fontSize="4.8em";
+			// this.style.color ="#8800bb";
+			getsiblings(this)
+		});
+		letter.addEventListener('mouseleave', function(){
+			for(let i=0; i<letters.length; i+=1){
+				letters[i].removeAttribute("style")
+			}
+		})
+	})
+
+	function getsiblings(selection){
+		for(let i=0; i<letters.length; i+=1){
+			if(letters[i] == selection){
+				// if(letters[i-1])letters[i-1].style= "width:7%; ";
+				// if(letters[i+1])letters[i+1].style= "width:7%; ";
+				// if(letters[i-2])letters[i-2].style= "width:3.5%; ";
+				// if(letters[i+2])letters[i+2].style= "width:3.5%; ";
+				// if(letters[i-3])letters[i-3].style= "width:1.75%; ";
+				// if(letters[i+3])letters[i+3].style= "width:1.75%; ";
+
+				if(letters[i-1])letters[i-1].style= `width:10%; background: linear-gradient(to right, ${color}88, ${color}cc);`;
+				if(letters[i+1])letters[i+1].style= `width:10%; background: linear-gradient(to left, ${color}88, ${color}cc);`;
+				if(letters[i-2])letters[i-2].style= `width:5%; background: linear-gradient(to right, ${color}44, ${color}88);`;
+				if(letters[i+2])letters[i+2].style= `width:5%; background: linear-gradient(to left, ${color}44, ${color}88);`;
+				if(letters[i-3])letters[i-3].style= `width:2.5%; background: linear-gradient(to right, ${color}00, ${color}44);`;
+				if(letters[i+3])letters[i+3].style= `width:2.5%; background: linear-gradient(to left, ${color}00, ${color}44);`;
+
+				// if(letters[i-1])letters[i-1].style= "width:10%; font-size:3.2em; ";
+				// if(letters[i+1])letters[i+1].style= "width:10%; font-size:3.2em; ";
+				// if(letters[i-2])letters[i-2].style= "width:5%; font-size:2em; ";
+				// if(letters[i+2])letters[i+2].style= "width:5%; font-size:2em; ";
+				// if(letters[i-3])letters[i-3].style= "width:2.5%; font-size:1.2em; ";
+				// if(letters[i+3])letters[i+3].style= "width:2.5%; font-size:1.2em; ";
+
+				// if(letters[i-6])letters[i-6].style= "width:20%; font-size:4.8em; ";
+				// if(letters[i+6])letters[i+6].style= "width:20%; font-size:4.8em; ";
+
+			}
+		}
+	}
+</script>
+</body>
+</html>

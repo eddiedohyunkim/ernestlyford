@@ -1,0 +1,6 @@
+<filter id="ultraBlur" width="150%" height="150%" x="-25%" y="-25%" color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="70"></feGaussianBlur>
+    <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0"></feColorMatrix>
+    <feComposite in2="SourceGraphic" operator="in"></feComposite>
+</filter>
+
